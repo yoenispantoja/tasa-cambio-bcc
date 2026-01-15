@@ -6,24 +6,70 @@
 
 Plugin de WordPress para mostrar las **tasas de cambio del Banco Central de Cuba** con diseño profesional, responsive y actualización automática.
 
-![Banner Preview](https://via.placeholder.com/800x200/2c3e50/d4af37?text=Tasa+de+Cambio+BCC)
+## 📸 Vista Previa
+
+### Banner Horizontal (Desktop)
+Perfecto para headers de sitios web, muestra automáticamente las monedas que caben en el espacio disponible.
+
+### Vista Móvil (Carrusel)
+Navegación intuitiva con controles para deslizar entre monedas.
+
+### Vista Completa con Tabs
+Muestra las 13 monedas con los 3 segmentos de tasas (Oficial, Pública, Especial).
+
+> **Nota**: Las capturas de pantalla están disponibles en [SCREENSHOTS.md](SCREENSHOTS.md)
 
 ## ✨ Características
 
-- **Widget para Sidebar**: Muestra tasas de cambio en formato vertical
-- **Banner Horizontal**: Vista superior con las principales monedas
-- **Vista Completa con Tabs**: Muestra las 13 monedas con los 3 segmentos
-- **Diseño Responsive**: Optimizado para móviles, tablets y desktop
-- **Cache Inteligente**: Sistema de caché de 1 hora para optimizar rendimiento
-- **Actualización Automática**: Refresco automático cada 30 minutos
-- **API del Banco Central**: Consume datos oficiales en tiempo real
+- ✅ **Widget para Sidebar**: Muestra tasas de cambio en formato vertical
+- ✅ **Banner Horizontal Responsive**: Muestra automáticamente las monedas que caben sin scroll
+- ✅ **Carrusel Móvil**: Navegación táctil optimizada para smartphones
+- ✅ **Vista Completa con Tabs**: Las 13 monedas con los 3 segmentos (I, II, III)
+- ✅ **Diseño Profesional**: Interfaz moderna con colores del BCC (dorado y azul)
+- ✅ **Cache Inteligente**: Sistema de caché de 1 hora para optimizar rendimiento
+- ✅ **Actualización Automática**: Refresco automático cada 30 minutos
+- ✅ **API Oficial**: Consume datos del Banco Central de Cuba en tiempo real
+- ✅ **Sin Errores Visibles**: Si el servicio falla, el banner simplemente no se muestra
+- ✅ **13 Monedas Disponibles**: USD, EUR, CAD, RUB, GBP, MXN, JPY, CHF, CNY, AUD, SEK, NOK, DKK
+- ✅ **Tooltip JPY**: Explicación clara para la tasa inversa del yen japonés
+- ✅ **Variaciones Coloreadas**: Verde para aumentos, rojo para disminuciones
 
 ## 📦 Instalación
 
-1. Sube la carpeta `tasa-cambio-bcc` al directorio `/wp-content/plugins/`
-2. Activa el plugin desde el menú 'Plugins' en WordPress
-3. Configura el widget desde Apariencia > Widgets
-4. Usa los shortcodes en páginas o posts
+### Opción 1: Descarga desde GitHub (Recomendado)
+
+1. Ve a [Releases](https://github.com/yoenispantoja/tasa-cambio-bbc/releases)
+2. Descarga la última versión (archivo `.zip`)
+3. En WordPress, ve a **Plugins > Añadir nuevo > Subir plugin**
+4. Selecciona el archivo descargado y haz clic en **Instalar ahora**
+5. Activa el plugin
+
+### Opción 2: Instalación Manual
+
+1. Clona o descarga este repositorio
+```bash
+git clone https://github.com/yoenispantoja/tasa-cambio-bbc.git
+```
+2. Copia la carpeta `tasa-cambio-bcc` a `/wp-content/plugins/`
+3. Activa el plugin desde el menú 'Plugins' en WordPress
+4. ¡Listo! El plugin ya está funcionando
+
+### Opción 3: Instalación Directa con Git
+
+```bash
+cd wp-content/plugins/
+git clone https://github.com/yoenispantoja/tasa-cambio-bbc.git tasa-cambio-bcc
+```
+
+## 🚀 Inicio Rápido
+
+Una vez activado el plugin:
+
+1. **Widget**: Ve a **Apariencia > Widgets** y arrastra "Tasas de Cambio BCC" al sidebar
+2. **Banner**: Agrega `[tasa_cambio_banner]` en tu página o en el header
+3. **Vista completa**: Agrega `[tasa_cambio_completo]` en cualquier página
+
+Para instrucciones detalladas, consulta [INICIO-RAPIDO.md](INICIO-RAPIDO.md)
 
 ## 🎨 Uso
 
@@ -261,7 +307,25 @@ Este plugin está licenciado bajo GPL v2 o posterior.
 
 ## 🤝 Contribuir
 
-Si encuentras un bug o quieres sugerir una mejora, por favor contacta al desarrollador.
+¿Quieres contribuir al proyecto? ¡Genial! Aquí te explicamos cómo:
+
+1. **Fork** el repositorio
+2. Crea una **rama** para tu feature (`git checkout -b feature/AmazingFeature`)
+3. **Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un **Pull Request**
+
+### Reportar Bugs
+
+Si encuentras un bug, por favor abre un issue con:
+- Descripción detallada del problema
+- Pasos para reproducirlo
+- Versión de WordPress y PHP
+- Screenshots si es posible
+
+### Sugerir Mejoras
+
+Las sugerencias son bienvenidas. Abre un issue con la etiqueta `enhancement` describiendo tu idea.
 
 ## 📞 Soporte
 
