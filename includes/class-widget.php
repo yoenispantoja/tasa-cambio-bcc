@@ -163,8 +163,8 @@ class Tasa_Cambio_BCC_Widget extends WP_Widget {
      */
     public function update($new_instance, $old_instance) {
         $instance = array();
-        $instance['segmento_defecto'] = sanitize_text_field($new_instance['segmento_defecto']);
-        $instance['monedas'] = isset($new_instance['monedas']) ? $new_instance['monedas'] : array();
+        $instance['segmento_defecto'] = isset($new_instance['segmento_defecto']) ? sanitize_text_field($new_instance['segmento_defecto']) : 'tasaEspecial';
+        $instance['monedas'] = isset($new_instance['monedas']) && is_array($new_instance['monedas']) ? array_map('sanitize_text_field', $new_instance['monedas']) : array('USD', 'EUR', 'CAD', 'RUB', 'MXN', 'CNY', 'GBP', 'JPY');
         return $instance;
     }
 
