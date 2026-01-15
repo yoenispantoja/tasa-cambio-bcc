@@ -110,7 +110,7 @@ El plugin ha sido desarrollado siguiendo las mejores prácticas de WordPress y e
 ### Créditos
 - Desarrollador: Yoenis Pantoja
 - GitHub: https://github.com/yoenispantoja
-- Repositorio: https://github.com/yoenispantoja/tasa-cambio-bbc
+- Repositorio: https://github.com/yoenispantoja/tasa-cambio-bcc
 - Datos: Banco Central de Cuba (https://www.bc.gob.cu)
 
 ---

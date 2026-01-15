@@ -188,7 +188,7 @@ Fuente: Banco Central de Cuba
 
 Nombre: Yoenis Pantoja
 GitHub: https://github.com/yoenispantoja
-Repositorio: https://github.com/yoenispantoja/tasa-cambio-bbc
+Repositorio: https://github.com/yoenispantoja/tasa-cambio-bcc
 Plugin: Tasa de Cambio BCC
 Versión: 1.0.0
 Licencia: GPL v2 o posterior
@@ -201,8 +201,8 @@ Fecha: 14 de enero de 2026
 ▸ Documentación: README.md
 ▸ Ejemplos: EJEMPLOS.html
 ▸ Inicio Rápido: INICIO-RAPIDO.md
-▸ GitHub: https://github.com/yoenispantoja/tasa-cambio-bbc
-▸ Issues: https://github.com/yoenispantoja/tasa-cambio-bbc/issues
+▸ GitHub: https://github.com/yoenispantoja/tasa-cambio-bcc
+▸ Issues: https://github.com/yoenispantoja/tasa-cambio-bcc/issues
 
 ═══════════════════════════════════════════════════════════════════════
 

@@ -39,7 +39,7 @@ Diseño vertical compacto ideal para barras laterales.
 
 ### Opción 1: Descarga desde GitHub (Recomendado)
 
-1. Ve a [Releases](https://github.com/yoenispantoja/tasa-cambio-bbc/releases)
+1. Ve a [Releases](https://github.com/yoenispantoja/tasa-cambio-bcc/releases)
 2. Descarga la última versión (archivo `.zip`)
 3. En WordPress, ve a **Plugins > Añadir nuevo > Subir plugin**
 4. Selecciona el archivo descargado y haz clic en **Instalar ahora**
@@ -49,7 +49,7 @@ Diseño vertical compacto ideal para barras laterales.
 
 1. Clona o descarga este repositorio
 ```bash
-git clone https://github.com/yoenispantoja/tasa-cambio-bbc.git
+git clone https://github.com/yoenispantoja/tasa-cambio-bcc.git
 ```
 2. Copia la carpeta `tasa-cambio-bcc` a `/wp-content/plugins/`
 3. Activa el plugin desde el menú 'Plugins' en WordPress
@@ -59,7 +59,7 @@ git clone https://github.com/yoenispantoja/tasa-cambio-bbc.git
 
 ```bash
 cd wp-content/plugins/
-git clone https://github.com/yoenispantoja/tasa-cambio-bbc.git tasa-cambio-bcc
+git clone https://github.com/yoenispantoja/tasa-cambio-bcc.git tasa-cambio-bcc
 ```
 
 ## 🚀 Inicio Rápido
@@ -299,7 +299,7 @@ jQuery.ajax({
 
 **Yoenis Pantoja**
 - GitHub: https://github.com/yoenispantoja
-- Repositorio: https://github.com/yoenispantoja/tasa-cambio-bbc
+- Repositorio: https://github.com/yoenispantoja/tasa-cambio-bcc
 - Plugin desarrollado para mostrar tasas del Banco Central de Cuba
 
 ## 📄 Licencia
@@ -330,7 +330,7 @@ Las sugerencias son bienvenidas. Abre un issue con la etiqueta `enhancement` des
 
 ## 📞 Soporte
 
-Para soporte, abre un issue en: https://github.com/yoenispantoja/tasa-cambio-bbc/issues
+Para soporte, abre un issue en: https://github.com/yoenispantoja/tasa-cambio-bcc/issues
 
 ---
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Tasa de Cambio BCC
- * Plugin URI: https://yoenispantoja.github.io/
+ * Plugin URI: https://github.com/yoenispantoja/tasa-cambio-bcc/
  * Description: Widget y shortcode para mostrar las tasas de cambio del Banco Central de Cuba
  * Version: 1.0.0
  * Author: Yoenis Pantoja Zaldívar

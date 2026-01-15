@@ -20,7 +20,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 ---
 
 TASA DE CAMBIO BCC - WORDPRESS PLUGIN
-Copyright (C) 2026 Yoenis Pantoja - https://github.com/yoenispantoja/tasa-cambio-bbc
+Copyright (C) 2026 Yoenis Pantoja - https://github.com/yoenispantoja/tasa-cambio-bcc
 
 Este plugin de WordPress está licenciado bajo GPL v2 o posterior.
 
@@ -78,6 +78,6 @@ precisión de la API oficial.
 ---
 
 Para consultas sobre la licencia, contacta a:
-https://github.com/yoenispantoja/tasa-cambio-bbc/issues
+https://github.com/yoenispantoja/tasa-cambio-bcc/issues
 
 Fecha: 14 de enero de 2026
