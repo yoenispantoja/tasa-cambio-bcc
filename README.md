@@ -11,13 +11,14 @@ Plugin de WordPress para mostrar las **tasas de cambio del Banco Central de Cuba
 ### Banner Horizontal (Desktop)
 Perfecto para headers de sitios web, muestra automáticamente las monedas que caben en el espacio disponible.
 
-### Vista Móvil (Carrusel)
-Navegación intuitiva con controles para deslizar entre monedas.
+![Banner Preview](assets/images/preview_banner.png)
 
-### Vista Completa con Tabs
-Muestra las 13 monedas con los 3 segmentos de tasas (Oficial, Pública, Especial).
+### Widget para Sidebar
+Diseño vertical compacto ideal para barras laterales.
 
-> **Nota**: Las capturas de pantalla están disponibles en [SCREENSHOTS.md](SCREENSHOTS.md)
+![Widget Preview](assets/images/preview_widget.png)
+
+> **Más capturas**: Las capturas de pantalla detalladas están disponibles en [SCREENSHOTS.md](SCREENSHOTS.md)
 
 ## ✨ Características
 
