@@ -1,0 +1,945 @@
+/**
+ * Estilos para el plugin Tasa de Cambio BCC
+ * Responsive design para widget y banner
+ */
+
+/* ========================================
+   VARIABLES Y RESET
+   ======================================== */
+:root {
+    --bcc-primary: #2c3e50;
+    --bcc-secondary: #d4af37;
+    --bcc-background: #f8f9fa;
+    --bcc-border: #e0e0e0;
+    --bcc-text: #333;
+    --bcc-text-light: #666;
+    --bcc-green: #27ae60;
+    --bcc-red: #e74c3c;
+    --bcc-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   WIDGET SIDEBAR (Vertical)
+   ======================================== */
+.tasa-cambio-bcc-widget {
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    overflow: visible;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-shadow: var(--bcc-shadow);
+    border: 1px solid var(--bcc-border);
+}
+
+.tasa-cambio-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 16px;
+    text-align: center;
+    border-bottom: 4px solid var(--bcc-secondary);
+    border-radius: 8px 8px 0 0;
+}
+
+.tasa-cambio-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--bcc-secondary);
+}
+
+.tasa-cambio-fecha {
+    font-size: 20px;
+    color: #bdc3c7;
+    font-weight: 500;
+}
+
+.tasa-cambio-list {
+    padding: 10px 0;
+}
+
+.tasa-cambio-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 15px;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background 0.3s ease;
+}
+
+.tasa-cambio-item:hover {
+    background: #f8f9fa;
+}
+
+.tasa-cambio-item:last-child {
+    border-bottom: none;
+}
+
+.tasa-flag {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.tasa-codigo {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bcc-primary);
+}
+
+.tasa-moneda-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tasa-variacion {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 4px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: 50px;
+}
+
+.tasa-valor {
+    text-align: right;
+}
+
+.tasa-variacion.positiva {
+    color: #27ae60;
+    background: rgba(39, 174, 96, 0.12);
+    border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.tasa-variacion.negativa {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.12);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.tasa-numero {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bcc-primary);
+}
+
+.tasa-moneda {
+    font-size: 11px;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+/* Icono de ayuda con tooltip */
+.tasa-help-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    background: var(--bcc-secondary);
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 4px;
+    cursor: help;
+    position: relative;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+.tasa-help-icon:hover {
+    background: #c9a532;
+    z-index: 9999;
+}
+
+.tasa-help-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: normal;
+    width: 200px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+    text-align: left;
+}
+
+.tasa-help-icon::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2px;
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+}
+
+.tasa-help-icon:hover::after,
+.tasa-help-icon:hover::before {
+    opacity: 1;
+}
+
+.tasa-cambio-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 11px 15px;
+    text-align: center;
+    font-size: 10px;
+    color: #6c757d;
+    border-top: 2px solid #e0e0e0;
+    font-weight: 500;
+}
+
+/* ========================================
+   BANNER HORIZONTAL (Superior del sitio)
+   ======================================== */
+.tasa-cambio-banner-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tasa-cambio-banner {
+    background: transparent;
+    color: var(--bcc-text);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.tasa-banner-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.bcc-logo {
+    background: var(--bcc-secondary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.bcc-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.bcc-fecha {
+    font-size: 11px;
+    color: #6c757d;
+}
+
+.bcc-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--bcc-primary);
+}
+
+.tasa-banner-monedas {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.tasa-banner-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 3px 12px;
+    flex-shrink: 0;
+    padding: 10px 12px;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    width: 150px;
+}
+
+.tasa-banner-item:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Nombre - fila completa superior */
+.tasa-banner-nombre {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 10px;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Bandera - columna izquierda */
+.tasa-banner-flag {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 28px;
+    line-height: 1;
+    align-self: center;
+}
+
+/* Código - columna izquierda debajo */
+.tasa-banner-info {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    align-self: center;
+}
+
+.tasa-banner-codigo {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bcc-primary);
+    line-height: 1;
+}
+
+/* Valor - columna derecha */
+.tasa-banner-valor {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+}
+
+.tasa-banner-numero {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1;
+}
+
+.tasa-banner-variacion {
+    font-size: 10px;
+    margin-top: 0;
+    line-height: 1;
+}
+
+.tasa-banner-variacion.positiva {
+    color: #27ae60;
+}
+
+.tasa-banner-variacion.negativa {
+    color: #e74c3c;
+}
+
+.tasa-banner-vermas {
+    flex-shrink: 0;
+}
+
+.btn-ver-mas {
+    background: var(--bcc-secondary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background: #c9a532;
+    transform: translateX(5px);
+}
+
+/* Ocultar controles del carousel en desktop */
+.tasa-banner-controls {
+    display: none;
+}
+
+/* ========================================
+   VISTA COMPLETA CON TABS
+   ======================================== */
+.tasa-cambio-completo {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--bcc-shadow);
+    padding: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.tasa-completo-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--bcc-border);
+}
+
+.tasa-completo-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bcc-logo-grande {
+    background: var(--bcc-secondary);
+    color: var(--bcc-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+
+.tasa-completo-logo span {
+    font-size: 14px;
+    color: var(--bcc-text-light);
+    font-weight: 500;
+}
+
+.tasa-completo-titulo {
+    flex: 1;
+}
+
+.tasa-titulo-fecha {
+    font-size: 13px;
+    color: var(--bcc-text-light);
+    margin-bottom: 5px;
+}
+
+.tasa-completo-titulo h2 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--bcc-primary);
+    font-weight: 700;
+}
+
+.tasa-completo-info {
+    color: var(--bcc-text-light);
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.tasa-completo-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bcc-border);
+}
+
+.tasa-tab {
+    background: transparent;
+    border: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bcc-text-light);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+.tasa-tab:hover {
+    color: var(--bcc-primary);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.tasa-tab.active {
+    color: var(--bcc-primary);
+    border-bottom-color: var(--bcc-secondary);
+}
+
+.tasa-completo-descripcion {
+    background: var(--bcc-background);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: var(--bcc-text);
+}
+
+.tasa-completo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.tasa-grid-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--bcc-background);
+    border-radius: 8px;
+    border: 1px solid var(--bcc-border);
+    transition: all 0.3s ease;
+}
+
+.tasa-grid-item:hover {
+    border-color: var(--bcc-secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.tasa-grid-flag {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.tasa-grid-info {
+    flex: 1;
+}
+
+.tasa-grid-nombre {
+    font-size: 12px;
+    color: var(--bcc-text-light);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.tasa-grid-codigo {
+    font-size: 15px;
+    color: var(--bcc-primary);
+    font-weight: 700;
+}
+
+.tasa-grid-valor {
+    text-align: right;
+}
+
+.tasa-grid-numero {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bcc-primary);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .tasa-cambio-banner {
+        padding: 12px 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .tasa-banner-monedas {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .tasa-banner-item {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .tasa-banner-flag {
+        font-size: 24px;
+    }
+
+    .tasa-banner-nombre {
+        font-size: 10px;
+    }
+
+    .tasa-banner-numero {
+        font-size: 16px;
+    }
+
+    .tasa-completo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 12px;
+    }
+
+    .tasa-completo-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tasa-completo-titulo h2 {
+        font-size: 24px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .tasa-cambio-banner-wrapper {
+        padding: 0 50px 0 10px;
+    }
+
+    .tasa-cambio-banner {
+        padding: 15px 5px 15px 0;
+        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bcc-logo {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .bcc-titulo {
+        font-size: 11px;
+    }
+
+    .bcc-fecha {
+        font-size: 10px;
+    }
+
+    .tasa-banner-monedas {
+        position: relative;
+        flex-direction: row;
+        width: auto;
+        gap: 0;
+        overflow: visible;
+    }
+
+    .tasa-banner-item {
+        display: none;
+    }
+
+    .tasa-banner-item.active {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 10px 12px;
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        gap: 3px 12px;
+    }
+
+    /* FILA 1: Nombre completo - ocupa toda la fila superior */
+    .tasa-banner-item.active .tasa-banner-nombre {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        font-size: 10px;
+        color: #6c757d;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-bottom: 0;
+    }
+
+    /* FILA 2 COLUMNA IZQUIERDA: Bandera */
+    .tasa-banner-item.active .tasa-banner-flag {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 28px;
+        line-height: 1;
+        align-self: center;
+    }
+
+    /* FILA 3 COLUMNA IZQUIERDA: Código debajo de la bandera */
+    .tasa-banner-item.active .tasa-banner-info {
+        grid-column: 1;
+        grid-row: 3;
+        text-align: center;
+        align-self: center;
+    }
+
+    .tasa-banner-item.active .tasa-banner-codigo {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--bcc-primary);
+        line-height: 1;
+    }
+
+    /* FILA 2 COLUMNA DERECHA: Valor */
+    .tasa-banner-item.active .tasa-banner-valor {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .tasa-banner-item.active .tasa-banner-numero {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1d2327;
+        line-height: 1;
+        align-self: flex-end;
+    }
+
+    .tasa-banner-item.active .tasa-banner-variacion {
+        font-size: 10px;
+        line-height: 1;
+        align-self: flex-end;
+    }
+
+    .tasa-banner-item.active .tasa-banner-variacion.positiva {
+        color: #27ae60;
+    }
+
+    .tasa-banner-item.active .tasa-banner-variacion.negativa {
+        color: #e74c3c;
+    }
+
+    /* Controles del carrusel - SOLO EN MOBILE */
+    .tasa-banner-controls {
+        display: flex;
+        position: absolute;
+        right: -45px;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tasa-banner-control {
+        background: var(--bcc-secondary);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tasa-banner-control:hover {
+        background: #c9a532;
+        transform: scale(1.1);
+    }
+
+    .tasa-banner-control:active {
+        transform: scale(0.95);
+    }
+
+    .tasa-banner-vermas {
+        display: none;
+    }
+
+    .tasa-banner-item {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-ver-mas {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tasa-cambio-bcc-widget {
+        margin-bottom: 20px;
+    }
+
+    .tasa-cambio-item {
+        padding: 10px 12px;
+    }
+
+    .tasa-moneda-info {
+        gap: 8px;
+    }
+
+    .tasa-valor {
+        gap: 10px;
+    }
+
+    .tasa-flag {
+        font-size: 20px;
+    }
+
+    .tasa-numero {
+        font-size: 15px;
+    }
+
+    .tasa-completo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tasa-completo-tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tasa-tab {
+        padding: 10px 15px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .tasa-tab.active {
+        border-left-color: var(--bcc-secondary);
+        border-bottom-color: transparent;
+        background: rgba(212, 175, 55, 0.1);
+    }
+
+    .tasa-completo-header {
+        padding: 15px;
+    }
+
+    .bcc-logo-grande {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .tasa-completo-titulo h2 {
+        font-size: 20px;
+    }
+
+    .tasa-grid-flag {
+        font-size: 28px;
+    }
+
+    .tasa-grid-numero {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 320px) {
+    .tasa-cambio-item {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .tasa-moneda-info {
+        gap: 6px;
+    }
+
+    .tasa-valor {
+        gap: 8px;
+    }
+
+    .tasa-flag {
+        font-size: 18px;
+    }
+
+    .tasa-numero {
+        font-size: 14px;
+    }
+
+    .tasa-codigo {
+        font-size: 12px;
+    }
+}
+
+/* ========================================
+   ANIMACIONES Y TRANSICIONES
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tasa-cambio-item,
+.tasa-banner-item,
+.tasa-grid-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Loading state */
+.tasa-cambio-loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--bcc-text-light);
+}
+
+.tasa-cambio-loading::after {
+    content: '...';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* Error state */
+.tasa-cambio-error {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    color: #856404;
+    padding: 20px 15px;
+    margin: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tasa-cambio-error p {
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.tasa-cambio-error p:first-child {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Print styles */
+@media print {
+    .tasa-cambio-banner,
+    .tasa-cambio-bcc-widget,
+    .tasa-cambio-completo {
+        box-shadow: none;
+    }
+
+    .tasa-tab,
+    .btn-ver-mas {
+        display: none;
+    }
+}

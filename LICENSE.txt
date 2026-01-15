@@ -1,0 +1,83 @@
+GNU GENERAL PUBLIC LICENSE
+Version 2, June 1991
+
+Copyright (C) 2026 [Tu Nombre]
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+---
+
+TASA DE CAMBIO BCC - WORDPRESS PLUGIN
+Copyright (C) 2026 Yoenis Pantoja - https://github.com/yoenispantoja/tasa-cambio-bbc
+
+Este plugin de WordPress está licenciado bajo GPL v2 o posterior.
+
+PERMISOS:
+✓ Uso comercial
+✓ Modificación
+✓ Distribución
+✓ Uso privado
+
+CONDICIONES:
+! El código fuente debe estar disponible
+! Las modificaciones deben mantener la misma licencia
+! Incluir aviso de copyright y licencia
+! Documentar cambios realizados
+
+LIMITACIONES:
+✗ Sin garantía
+✗ Sin responsabilidad
+
+---
+
+ATRIBUCIONES:
+
+Este plugin consume datos del Banco Central de Cuba a través de su API pública.
+Los datos de las tasas de cambio son propiedad del Banco Central de Cuba.
+
+API del Banco Central de Cuba:
+https://api.bc.gob.cu/v1/tasas-de-cambio/historico
+
+Para más información sobre el Banco Central de Cuba:
+https://www.bc.gob.cu
+
+---
+
+TERCEROS:
+
+Este plugin utiliza las siguientes tecnologías:
+
+- WordPress (GPL v2+)
+- jQuery (MIT License)
+- Emojis Unicode para banderas (dominio público)
+
+---
+
+DESCARGO DE RESPONSABILIDAD:
+
+Este plugin se proporciona "tal cual", sin garantías de ningún tipo,
+expresas o implícitas. El autor no se hace responsable de daños,
+pérdidas o problemas que puedan surgir del uso de este software.
+
+Los datos de las tasas de cambio son proporcionados por el Banco
+Central de Cuba y su exactitud depende de la disponibilidad y
+precisión de la API oficial.
+
+---
+
+Para consultas sobre la licencia, contacta a:
+https://github.com/yoenispantoja/tasa-cambio-bbc/issues
+
+Fecha: 14 de enero de 2026
